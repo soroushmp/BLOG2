@@ -1,0 +1,26 @@
+@font-face {
+    font-family: Vazir;
+    src: url('1/Vazir.eot');
+    src: url('1/Vazir.eot?#iefix') format('embedded-opentype'),
+         url('1/Vazir.woff2') format('woff2'),
+         url('1/Vazir.woff') format('woff'),
+         url('1/Vazir.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.card-text{
+    direction: rtl;
+}
+h1 , h2 , h3 , h4 , h5 , p , a{
+    font-family: 'Vazir';
+
+}
+.div3{
+    background-color: #3498db; 
+    transition: box-shadow 0.3s ease; 
+}
+
+.div3:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+}
+  

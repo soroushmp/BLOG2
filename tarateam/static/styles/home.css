@@ -1,0 +1,42 @@
+@font-face {
+    font-family: Vazir;
+    src: url('1/Vazir.eot');
+    src: url('1/Vazir.eot?#iefix') format('embedded-opentype'),
+         url('1/Vazir.woff2') format('woff2'),
+         url('1/Vazir.woff') format('woff'),
+         url('1/Vazir.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 , h2 , h3 , h4 , h5 , p , a{
+    font-family: 'Vazir';
+
+}
+.text-right.text1{
+    direction: rtl;
+}
+.text-right.text2{
+    direction: rtl;
+}
+
+.card-text.p1{
+    direction: rtl;
+}
+.card-text.p2{
+    direction: rtl;
+}
+.card-text.p3{
+    direction: rtl;
+}
+.card-text.p4{
+    direction: rtl;
+}
+.mt-3.bg-primary{
+    width: 100%;
+    height: 100px;
+}
+.text8{
+    direction: rtl;
+    font-family: 'Vazir';
+}

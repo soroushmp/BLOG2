@@ -1,0 +1,60 @@
+@font-face {
+    font-family: Vazir;
+    src: url('1/Vazir.eot');
+    src: url('1/Vazir.eot?#iefix') format('embedded-opentype'),
+         url('1/Vazir.woff2') format('woff2'),
+         url('1/Vazir.woff') format('woff'),
+         url('1/Vazir.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 , h2 , h3 , h4 , h5 , p , a{
+    font-family: 'Vazir';
+
+}
+.body{
+    background-color: rgb(134, 134, 189);
+}
+.text1{
+    color: rgb(134, 134, 189);
+}
+.title{
+    color: rgb(107, 107, 168);
+
+}
+.input1{
+    border-color:  rgb(161, 161, 212);
+    border-radius: 6px;
+    width: 70%;
+    font-family: 'Vazir';
+    height: 40px;
+    direction: rtl;
+}
+.name1{
+    direction: rtl;
+    font-family: 'Vazir';
+
+}
+.num1{
+    font-family: 'Vazir';
+
+}
+.input3{
+    border-color:  rgb(161, 161, 212);
+
+    border-radius: 6px;
+    width: 70%;
+    font-family: 'Vazir';
+    height: 40px;
+}
+
+.text3{
+    font-family: 'Vazir';
+    direction: rtl;
+
+}
+.text2{
+    font-family: 'Vazir';
+
+}

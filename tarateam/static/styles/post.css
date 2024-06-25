@@ -1,0 +1,25 @@
+@font-face {
+    font-family: Vazir;
+    src: url('1/Vazir.eot');
+    src: url('1/Vazir.eot?#iefix') format('embedded-opentype'),
+         url('1/Vazir.woff2') format('woff2'),
+         url('1/Vazir.woff') format('woff'),
+         url('1/Vazir.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 , h2 , h3 , h4 , h5 , h6, p , a , li {
+    font-family: 'Vazir';
+}
+.hr1{
+    color: rgb(192, 199, 201);
+}
+.text1{
+    font-family: 'Vazir';
+
+}
+.div2{
+    direction: rtl;
+
+}

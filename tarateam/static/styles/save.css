@@ -1,0 +1,16 @@
+@font-face {
+    font-family: Vazir;
+    src: url('1/Vazir.eot');
+    src: url('1/Vazir.eot?#iefix') format('embedded-opentype'),
+         url('1/Vazir.woff2') format('woff2'),
+         url('1/Vazir.woff') format('woff'),
+         url('1/Vazir.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.body{
+    background-color: rgb(95, 138, 158);
+}
+.text1{
+    color: white;
+}
