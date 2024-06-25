@@ -1,46 +1,42 @@
-from django.shortcuts import render , get_object_or_404 ,  redirect
-from .models import post, Comment
-from .forms import CommentsForm , Form_CooperationRequest
+from django.contrib import messages
+from django.shortcuts import render, get_object_or_404, redirect
+
+from .forms import CommentsForm, Form_CooperationRequest
+from .models import Post
 
 
-def home(request):
-    return render(request , 'Posts/home.html')
+def homepage_render(request):
+    return render(request, 'home.html')
 
 
-def blog(request):
-    posts = post.objects.order_by('-created_at')
-    return render(request , 'Posts/blog.html' ,{'data' : posts})
+def blogs_render(request):
+    blogs = Post.objects.order_by('-created_at')
+    return render(request, 'blogs.html', {'blogs': blogs})
 
 
-def post_def(request , post_id):
-    post_data =get_object_or_404(post,pk=post_id)
+def blog_render(request, pk):
+    selected_blog = get_object_or_404(Post, id=pk)
 
-    comments = post_data.comments.all()
-    form = None
-    # if request.method == 'POST':
-    form = CommentsForm(request.POST)
-    if form.is_valid():
-        comment = form.save(commit=False)
-        comment.post= post_data
-        comment.save()
+    if request.method == 'POST':
+        form = CommentsForm(request.POST)
+        if form.is_valid():
+            comment = form.save(commit=False)
+            comment.post = selected_blog
+            comment.save()
     else:
         form = CommentsForm()
-    return render(request, 'Posts/post.html', {'data': post_data, 'comments': comments, 'form': form})
+    return render(request, 'blog.html', {'blog': selected_blog, 'form': form})
 
 
-
-def CooperationRequest_page(request):
-    form = None
-
+def cooperation_request_page(request):
     if request.method == 'POST':
         form = Form_CooperationRequest(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('save')
+            messages.success(request, 'درخواست شما با موفقیت افزوده شد')
+        else:
+            messages.error(request, 'درخواست شما با مشکل روبرو شد')
+
     else:
         form = Form_CooperationRequest()
-    return render(request, 'Posts/form.html', { 'form': form})
-    
-            
-def save(request):
-    return render(request,'Posts/save.html')
+    return render(request, 'form.html', {'form': form})
